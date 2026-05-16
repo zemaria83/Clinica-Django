@@ -1,1 +1,1 @@
-"# Cl¡nica Django" 
+"# Clinica Django" 
