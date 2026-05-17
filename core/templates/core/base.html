@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clínica Django</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; background: #f4f6f9; color: #333; }
+        nav { background: #1a6b8a; padding: 12px 24px; }
+        nav a { color: white; text-decoration: none; margin-right: 20px; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .container { max-width: 960px; margin: 30px auto; padding: 0 20px; }
+        h1 { color: #1a6b8a; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; }
+        th { background: #1a6b8a; color: white; padding: 12px; text-align: left; }
+        td { padding: 10px 12px; border-bottom: 1px solid #e0e0e0; }
+        tr:hover { background: #f0f7fb; }
+        a { color: #1a6b8a; }
+        .badge { padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: bold; }
+        .agendada { background: #d4edff; color: #0069b4; }
+        .realizada { background: #d4edda; color: #155724; }
+        .cancelada { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'lista_pacientes' %}">Pacientes</a>
+        <a href="{% url 'lista_consultas' %}">Consultas</a>
+        <a href="/admin/">Admin</a>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
