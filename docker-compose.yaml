@@ -12,9 +12,11 @@ services:
     depends_on:
       - db
     command: >
-      sh -c "python manage.py migrate &&
-             gunicorn --bind 0.0.0.0:8000 clinica.wsgi"
-
+      sh -c "echo 'A aguardar base de dados...' &&
+         sleep 15 &&
+         python manage.py migrate &&
+         python manage.py collectstatic --no-input &&
+         gunicorn --bind 0.0.0.0:8000 clinica.wsgi"
   db:
     image: mysql:latest
     env_file: .env

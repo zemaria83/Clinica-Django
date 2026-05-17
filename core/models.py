@@ -3,7 +3,7 @@ from django.db import models
 class Paciente(models.Model):
     nome = models.CharField(max_length=200)
     data_nascimento = models.DateField()
-    email = models.EmailField(unique=True)
+    email = models.EmailField(unique=True, blank=True, null=True)
     telefone = models.CharField(max_length=20)
     criado_em = models.DateTimeField(auto_now_add=True)
 
