@@ -7,7 +7,7 @@ Aplicação web desenvolvida com Django no âmbito do projeto final da disciplin
 ## Tecnologias utilizadas
 
 - Python 3 + Django 5.2
-- MySQL (via Docker)
+- Mysqlclient
 - Docker + Docker Compose
 - Gunicorn
 - WhiteNoise
